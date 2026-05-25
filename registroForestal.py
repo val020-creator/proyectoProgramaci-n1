@@ -13,8 +13,7 @@ Original file is located at
 if "registroForestal" not in dir():
     registroForestal    = []
     idsEspecies         = {}
-    contadorEspecies    = 1
-
+    contadorEspecies=1
 print(f"Estado cargado — {len(registroForestal)} registro(s) en memoria.")
 
 import csv
@@ -33,7 +32,7 @@ styleLabel = {"description_width": "initial"}
 
 #Brigadas
 tituloBrigada = widgets.HTML(
-    "<h3 style='color:white;'>INFORMACIÓN DE LA BRIGADA</h3>")
+    "<h3 style='color:GREY;'>INFORMACIÓN DE LA BRIGADA</h3>")
 
 nombreBrigada = widgets.Text(
     description="Nombre de brigada",
@@ -64,7 +63,7 @@ colaboradorTres = widgets.Text(
 
 #Lugares
 tituloLote = widgets.HTML(
-    "<h3 style='color:white;'>LOTE DE MUESTREO</h3>")
+    "<h3 style='color:GREY;'>LOTE DE MUESTREO</h3>")
 
 idLote = widgets.Text(
     description="ID lote",
@@ -84,7 +83,7 @@ municipio = widgets.Text(
     layout=layoutTercio,
     style=styleLabel)
 
-tituloRegistro = widgets.HTML("<h3 style='color:white;'>REGISTRO FORESTAL</h3>")
+tituloRegistro = widgets.HTML("<h3 style='color:GREY;'>REGISTRO FORESTAL</h3>")
 
 #Datos recopilados
 nombreComun = widgets.Text(
@@ -149,7 +148,7 @@ btnLimpiar = widgets.Button(
 salida = widgets.Output()
 
 def ejecutar(b):
-
+    global contadorEspecies
     with salida:
         clear_output()
         opcion = opciones.value
